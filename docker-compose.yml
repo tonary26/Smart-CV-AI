@@ -15,6 +15,8 @@ services:
       dockerfile: php.Dockerfile
     volumes:
       - ./src:/var/www/laravel:z
+    user: "${UID}:${GID}"
+
   mysql:
     image: 'mysql:8.0'
     ports:
@@ -33,19 +35,25 @@ services:
       dockerfile: composer.Dockerfile
     volumes:
       - ./src:/var/www/laravel:z
+    user: "${UID}:${GID}"
+
   artisan:
     build:
       context: ./dockerfiles
       dockerfile: php.Dockerfile
     volumes:
       - ./src:/var/www/laravel:z
+    user: "${UID}:${GID}"
 
   node:
     image: 'node:20-alpine'
+    ports:
+      - "5173:5173"
     working_dir: /var/www/laravel
     volumes:
       - ./src:/var/www/laravel:z
-    command: sh -c "npm install && npm run dev"
+    command: npm run dev -- --host
+    user: "${UID}:${GID}"
 
 volumes:
   mysql_data:
