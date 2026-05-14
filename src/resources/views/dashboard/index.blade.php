@@ -19,7 +19,7 @@
             <div class="action-card primary">
                 <h2>Создать Smart CV</h2>
                 <p>Используйте ИИ для автоматического подбора навыков и формулировок.</p>
-                <a href="{{ route('cv.create') }}" class="btn btn-white">Начать</a>
+                <a href="{{ route('cv.create.step1') }}" class="btn btn-white">Начать</a>
             </div>
 
             <div class="action-card outline">

@@ -13,7 +13,8 @@
     <div class="logo">Smart CV</div>
     <nav class="nav-menu">
         <a href="{{ route('dashboard.index') }}" class="nav-link active">Главная</a>
-        <a href="{{ route('cv.create')  }}" class="nav-link active">Создать CV</a>
+        <a href="{{ route('cv.index') }}" class="nav-link active">Резюме</a>
+        <a href="{{ route('cv.create.step1')  }}" class="nav-link active">Создать CV</a>
     </nav>
 </aside>
 
