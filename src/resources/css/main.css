@@ -51,6 +51,24 @@ body {
     border-bottom: 1px solid #000000;
 }
 
+.logout-btn {
+    background-color: white;
+    border: none;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+    width: fit-content;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    border-bottom: 1px solid #000000;
+}
+
 .main {
     flex-grow: 1;
     padding: 80px;

@@ -1,3 +1,4 @@
 @import "./main.css";
 @import "dashboard/index.css";
 @import "cv/create.css";
+@import "auth/register.css";

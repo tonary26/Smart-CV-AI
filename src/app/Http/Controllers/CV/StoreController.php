@@ -30,6 +30,7 @@ class StoreController extends Controller
         $data = $request->validated();
         $data['hobby'] = array_map('trim', explode(',', $data['hobby']));
         $data['language'] = array_map('trim', explode(',', $data['language']));
+
         session(['step3' => $data]);
 
         return redirect()->route('cv.generate');
@@ -43,7 +44,13 @@ class StoreController extends Controller
             session('step3', []),
         );
 
-        CV::create($data);
+        CV::create([
+            ...$data,
+            'user_id' => auth()->id()
+        ]);
+
+        session()->forget(['step1', 'step2', 'step3']);
+
         return redirect()->route('cv.index');
     }
 }

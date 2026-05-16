@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-    <title>Главная</title>
+    <title>Smart CV | Главная</title>
 @endsection
 
 @section('styles')

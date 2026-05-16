@@ -16,7 +16,7 @@
                 <h1 class="editor-title">Персональная информация</h1>
             </div>
             <div class="actions">
-                <button class="btn-outline">Сохранить черновик</button>
+                <button type="submit" class="btn-outline" form="form-save-as-draft">Сохранить черновик</button>
                 <button type="submit" class="btn-black" form="step1-form">Далее →</button>
             </div>
         </header>
@@ -64,6 +64,10 @@
 {{--                    </label>--}}
 {{--                </div>--}}
 {{--            </div>--}}
+        </form>
+
+        <form id="form-save-as-draft" action="{{ route('cv.store.save-as-draft') }}" method="post">
+            @csrf
         </form>
     </main>
 @endsection

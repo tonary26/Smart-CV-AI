@@ -22,7 +22,8 @@ class GenerateController extends Controller
         )->prompt("
             На основе данных ниже создай профессиональное резюме.
             Улучши формулировки, исправь ошибки.
-            Верни ТОЛЬКО валидный JSON без markdown, без ```json.
+            Не надо добавлять данные которые не указаны, работай только с тем что есть.
+            Верни ТОЛЬКО валидный JSON без markdown, без ```json. 
 
             Данные: " . json_encode($cvData, JSON_UNESCAPED_UNICODE) . "
 
@@ -42,7 +43,10 @@ class GenerateController extends Controller
         );
 
         $cv = json_decode((string) $response, true);
-        CV::create($cv);
+        CV::create([
+            ...$cv,
+            'user_id' => auth()->id()
+        ]);
 
         session()->forget(['step1', 'step2', 'step3']);
 

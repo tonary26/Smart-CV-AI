@@ -16,7 +16,8 @@ class CV extends Model
         'experience',
         'stack',
         'language',
-        'hobby'
+        'hobby',
+        'user_id'
     ];
 
     protected $casts = [

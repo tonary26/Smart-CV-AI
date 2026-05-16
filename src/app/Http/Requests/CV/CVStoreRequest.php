@@ -33,6 +33,7 @@ class CVStoreRequest extends FormRequest
             'stack' => ['string', 'nullable'],
             'language' => ['string', 'nullable'],
             'hobby' => ['string', 'nullable'],
+            'user_id' => ['integer', 'nullable']
         ];
     }
 }
