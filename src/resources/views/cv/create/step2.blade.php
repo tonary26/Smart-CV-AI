@@ -16,7 +16,6 @@
                 <h1 class="editor-title">Основная информация</h1>
             </div>
             <div class="actions">
-                <button class="btn-outline">Сохранить черновик</button>
                 <button type="submit" class="btn-black" form="step2-form">Далее →</button>
             </div>
         </header>

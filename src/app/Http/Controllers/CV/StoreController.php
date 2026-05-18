@@ -4,7 +4,6 @@ namespace App\Http\Controllers\CV;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CV\CVStoreRequest;
-use App\Models\CV;
 
 class StoreController extends Controller
 {
@@ -34,23 +33,5 @@ class StoreController extends Controller
         session(['step3' => $data]);
 
         return redirect()->route('cv.generate');
-    }
-
-    public function saveAsDraft()
-    {
-        $data = array_merge(
-            session('step1', []),
-            session('step2', []),
-            session('step3', []),
-        );
-
-        CV::create([
-            ...$data,
-            'user_id' => auth()->id()
-        ]);
-
-        session()->forget(['step1', 'step2', 'step3']);
-
-        return redirect()->route('cv.index');
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-    <title>Smart CV | Регистрация</title>
+    <title>Smart CV</title>
 @endsection
 
 @section('styles')
@@ -30,10 +30,13 @@
                             <span class="lab">ATS Score</span>
                         </div>
                     </div>
-                    <div class="card-actions">
-                        <button class="btn-text">Редактировать</button>
-                        <button class="btn-text danger">Удалить</button>
-                    </div>
+                    <form action="{{ route('cv.delete', $cv->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <div class="card-actions">
+                            <button class="btn-text danger" type="submit">Удалить</button>
+                        </div>
+                    </form>
                 </div>
             @endforeach
         </section>

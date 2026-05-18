@@ -65,9 +65,5 @@
 {{--                </div>--}}
 {{--            </div>--}}
         </form>
-
-        <form id="form-save-as-draft" action="{{ route('cv.store.save-as-draft') }}" method="post">
-            @csrf
-        </form>
     </main>
 @endsection

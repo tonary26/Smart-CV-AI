@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\CV\CreateController;
 use App\Http\Controllers\CV\IndexController;
-use App\Http\Controllers\CV\GenerateController;
+use App\Http\Controllers\CV\CreateController;
 use App\Http\Controllers\CV\StoreController;
+use App\Http\Controllers\CV\GenerateController;
+use App\Http\Controllers\CV\DestroyController;
 
 Route::get('/', IndexController::class)->name('index');
 
@@ -18,6 +19,6 @@ Route::post('/create/step2', [StoreController::class, 'step2'])->name('store.ste
 Route::get('/create/step3', [CreateController::class, 'step3'])->name('create.step3');
 Route::post('/create/step3', [StoreController::class, 'step3'])->name('store.step3');
 
-Route::post('/create/draft', [StoreController::class, 'saveAsDraft'])->name('store.save-as-draft');
-
 Route::get('/create/generate', GenerateController::class)->name('generate');
+
+Route::delete('/{cv}/delete', DestroyController::class)->name('delete');
