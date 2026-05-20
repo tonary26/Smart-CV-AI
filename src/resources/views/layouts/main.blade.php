@@ -15,6 +15,7 @@
         <a href="{{ route('dashboard.index') }}" class="nav-link active">Главная</a>
         <a href="{{ route('cv.index') }}" class="nav-link active">Резюме</a>
         <a href="{{ route('cv.create.step1')  }}" class="nav-link active">Создать CV</a>
+        <a href="{{ route('cv.analyze.show')  }}" class="nav-link active">Анализ CV</a>
         @guest
             <a href="{{ route('auth.show-register') }}" class="nav-link active">Регистрация</a>
             <a href="{{ route('auth.show-login') }}" class="nav-link active">Войти</a>

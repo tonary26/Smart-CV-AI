@@ -25,7 +25,7 @@
             <div class="action-card outline">
                 <h2>Загрузить резюме</h2>
                 <p>Импортируйте существующий PDF или DOCX для анализа нейросетью.</p>
-                <button class="btn btn-black">Выбрать файл</button>
+                <a href="{{ route('cv.analyze.show') }}" class="btn btn-black">Выбрать файл</a>
             </div>
         </div>
     </main>

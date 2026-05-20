@@ -7,6 +7,7 @@ use App\Http\Controllers\CV\CreateController;
 use App\Http\Controllers\CV\StoreController;
 use App\Http\Controllers\CV\GenerateController;
 use App\Http\Controllers\CV\DestroyController;
+use App\Http\Controllers\CV\Analyze;
 
 Route::get('/', IndexController::class)->name('index');
 
@@ -20,5 +21,8 @@ Route::get('/create/step3', [CreateController::class, 'step3'])->name('create.st
 Route::post('/create/step3', [StoreController::class, 'step3'])->name('store.step3');
 
 Route::get('/create/generate', GenerateController::class)->name('generate');
+
+Route::get('/analyze', [Analyze::class, 'show'])->name('analyze.show');
+Route::post('/analyze', [Analyze::class, 'analyze'])->name('analyze');
 
 Route::delete('/{cv}/delete', DestroyController::class)->name('delete');

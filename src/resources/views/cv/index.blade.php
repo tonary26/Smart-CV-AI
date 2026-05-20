@@ -24,12 +24,6 @@
                     <div class="card-info">
                         <h2 class="resume-name">{{ $cv->job }}</h2>
                     </div>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <span class="val">88%</span>
-                            <span class="lab">ATS Score</span>
-                        </div>
-                    </div>
                     <form action="{{ route('cv.delete', $cv->id) }}" method="post">
                         @csrf
                         @method('DELETE')
