@@ -15,6 +15,7 @@ class CV extends Model
         'job',
         'experience',
         'stack',
+        'company',
         'language',
         'hobby',
         'user_id'
@@ -22,6 +23,7 @@ class CV extends Model
 
     protected $casts = [
         'stack' => 'array',
+        'company' => 'array',
         'language' => 'array',
         'hobby' => 'array',
     ];

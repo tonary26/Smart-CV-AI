@@ -38,6 +38,11 @@
                 <label>Стек</label>
                 <input name="stack" type="text" placeholder="Например: Docker, PHP, GitHub" class="main-input">
             </div>
+
+            <div class="input-group">
+                <label>Место работы</label>
+                <input name="company" type="text" placeholder="Например: Amazon 2 года, Unifun 6 месяцев" class="main-input">
+            </div>
         </form>
     </main>
 @endsection

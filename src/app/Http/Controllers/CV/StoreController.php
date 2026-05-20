@@ -19,6 +19,8 @@ class StoreController extends Controller
     {
         $data = $request->validated();
         $data['stack'] = array_map('trim', explode(',', $data['stack']));
+        $data['company'] = array_map('trim', explode(',', $data['company']));
+
         session(['step2' => $data]);
 
         return redirect()->route('cv.create.step3');

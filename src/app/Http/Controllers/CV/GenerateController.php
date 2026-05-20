@@ -37,6 +37,7 @@ class GenerateController extends Controller
                 \"job\": \"\",
                 \"experience\": \"\",
                 \"stack\": [],
+                \"company\": [],
                 \"language\": [],
                 \"hobby\": []
             }"

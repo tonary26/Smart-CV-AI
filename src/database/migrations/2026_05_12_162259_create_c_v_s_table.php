@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('job')->nullable();
             $table->text('experience')->nullable();
             $table->json('stack')->nullable();
+            $table->json('company')->nullable();
             $table->json('language')->nullable();
             $table->json('hobby')->nullable();
 

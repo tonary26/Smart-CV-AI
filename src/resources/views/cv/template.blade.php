@@ -159,6 +159,18 @@
         </div>
     @endif
 
+    @if(!empty($cv['hobby']) && count($cv['hobby']) > 0)
+        <div class="section">
+            <div class="section-title">Компании</div>
+
+            <div class="tags">
+                @foreach($cv['company'] as $c)
+                        <span class="tag">{{ $c }}</span>
+                @endforeach
+            </div>
+        </div>
+    @endif
+
     @if(!empty($cv['language']) && count($cv['language']) > 0)
         <div class="section">
             <div class="section-title">Языки</div>

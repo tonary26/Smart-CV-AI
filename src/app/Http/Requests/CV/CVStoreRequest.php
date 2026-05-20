@@ -31,6 +31,7 @@ class CVStoreRequest extends FormRequest
             'job' => ['string', 'nullable'],
             'experience' => ['string', 'nullable'],
             'stack' => ['string', 'nullable'],
+            'company' => ['string', 'nullable'],
             'language' => ['string', 'nullable'],
             'hobby' => ['string', 'nullable'],
             'user_id' => ['integer', 'nullable']
